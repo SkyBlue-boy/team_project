@@ -1,23 +1,16 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-
+const path = require('path');
 const app = express();
-const port = 3000;
+const port = 3000;  // 사용할 포트 번호
 
-// Middleware
-app.use(bodyParser.json());
-app.use(express.static(__dirname));
+// 정적 파일 제공 설정
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
-app.post('/submission', (req, res) => {
-    const { username, password, code } = req.body;
-    console.log(`Received submission from ${username}`);
-    console.log(`Password: ${password}`);
-    console.log(`Code: ${code}`);
-    res.json({ message: 'Submission received!' });
+// 기본 라우트 설정
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Start server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server is running at http://localhost:${port}`);
 });
