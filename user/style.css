@@ -1,6 +1,6 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #e9ecef;
+    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,12 +8,17 @@ body {
     margin: 0;
 }
 
+.container-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
 .container {
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    width: 400px;
     text-align: center;
 }
 
@@ -30,17 +35,19 @@ label {
 }
 
 input, textarea {
-    width: calc(100% - 22px);
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #ced4da;
     border-radius: 4px;
     transition: border-color 0.3s;
+    box-sizing: border-box;
 }
 
 input:focus, textarea:focus {
     border-color: #80bdff;
     outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
 }
 
 button {
@@ -52,6 +59,7 @@ button {
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
 }
 
 button:hover {
@@ -64,59 +72,8 @@ button:active {
     transform: translateY(0);
 }
 
-
-
-
-
-
-/* 1안 
-/*
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background: white;
-    padding: 20px; 
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 320px; 
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
+#result, #result-output {
+    margin-top: 20px;
+    color: #28a745;
     font-weight: bold;
 }
-
-input, textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #5cb85c;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #4cae4c;
-}*/
