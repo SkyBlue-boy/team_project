@@ -7,3 +7,8 @@
 
 
 내 담당 파트 : user (Frontend)
+
+
+# demo video
+
+[![Video Label](http://img.youtube.com/vi/R__rFzn87Jw/0.jpg)](https://youtu.be/R__rFzn87Jw)
